@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				guard: {
+					blue: "#2563eb",
+					accent: "#3b82f6",
+					red: "#ef4444",
+					amber: "#f59e0b",
+					green: "#10b981",
+					gray: "#f3f4f6",
+					"dark-blue": "#1e40af"
 				}
 			},
 			borderRadius: {
@@ -84,11 +94,29 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				typing: {
+					"0%": {
+						width: "0%",
+						visibility: "hidden"
+					},
+					"100%": {
+						width: "100%"
+					}
+				},
+				blink: {
+					"50%": {
+						borderColor: "transparent"
+					},
+					"100%": {
+						borderColor: "white"
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				typing: "typing 2s steps(20) infinite alternate, blink .7s infinite"
 			}
 		}
 	},
